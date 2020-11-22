@@ -44,6 +44,7 @@ function run(time){
 	const delta = (time - lastTime) / 1000
 	lastTime = time;
 	ctx.clearRect(0, 0, canvas.width, canvas.height)
+
 	if(state.value === "start") {
 		startAnimationTime -= delta;
 		ctx.fillStyle = `rgb(255,255,255)`
@@ -59,6 +60,8 @@ function run(time){
 				winnerNumber = i + 1;
 				scores[i]++;
 				state.setState("result")
+				window.requestAnimationFrame(run)
+				return;
 			}
 		}
 		for(let i = 0; i < paddles.length; i ++) {
@@ -87,6 +90,7 @@ function run(time){
 			state.setState("game")
 		}
 	}
+
 	window.requestAnimationFrame(run)
 }
 CanvasRenderingContext2D.prototype.circle = function(x,y,r) {
