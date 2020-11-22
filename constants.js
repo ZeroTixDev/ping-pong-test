@@ -14,3 +14,4 @@ const GAME_WIDTH = 1600;
 const GAME_HEIGHT = 900;
 const START_ANIMATION_TIME = 1;
 const CENTER = {x: GAME_WIDTH / 2, y: GAME_HEIGHT / 2}
+const SIMULATION_STEP_TIME = 1000 / 60; //ms

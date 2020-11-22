@@ -14,11 +14,11 @@ class Paddle {
 	get rectPos() {
 		return {x:this.x-PADDLE_WIDTH/2,y:this.y-PADDLE_HEIGHT/2}
 	}
-	update(delta) {
-		if(this.up) {
+	update(delta,[up,down]=[]) {
+		if(this.up || up) {
 			this.y -= PADDLE_SPEED_PER_SECOND * delta;
 		}
-		if(this.down) {
+		if(this.down || down) {
 			this.y += PADDLE_SPEED_PER_SECOND * delta;
 		}
 		if(this.flash) {
