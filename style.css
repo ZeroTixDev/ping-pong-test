@@ -1,0 +1,24 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+canvas {
+	position:absolute;
+	background:black;
+	animation:fadeIn 3s linear;
+	/*border:1px solid white;*/
+}
+@keyframes fadeIn {
+	0%{
+		opacity:0
+	}
+	100%{
+		opacity:1
+	}
+}
+body {
+	background:black;
+	font-size:16px;
+	overflow: hidden;
+}
